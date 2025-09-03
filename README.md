@@ -26,7 +26,10 @@ p/CyberFlick
 ├─ libraries
 │  └─ (省略)
 ├─ SeeedStudio
-│  ├─ SeeedStudio.ino
+│  ├─ SeeedStudio_A_main
+│  │  └─ SeeedStudio_A_main.ino
+│  ├─ SeeedStudio_B_main
+│  │  └─ SeeedStudio_B_main.ino
 │  └─ README.md
 ├─ .gitatributes
 └─ README.md
