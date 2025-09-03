@@ -1,0 +1,8 @@
+# Ignore workspace settings
+.vscode/
+
+# Common ignores
+node_modules/
+dist/
+.DS_Store
+Thumbs.db

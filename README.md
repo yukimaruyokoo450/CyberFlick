@@ -38,14 +38,26 @@ p/CyberFlick
 
 1. ファイル>基本設定を開く
 
-    ![topREADME_asset_kankyou1](assets/topREADME_asset_kankyou1.png)
+    ![top_README_kankyou1](assets/top_README_kankyou1.png)
 
 2. スケッチブックの場所を``..(yourDocument)/CyberFlick``に設定。下記赤枠部分。
-    ![topREADME_asset_kankyou2](assets/topREADME_asset_kankyou2.png)
+    ![top_README_kankyou2](assets/top_README_kankyou2.png)
 
-3. このように設定することでスケッチブック内に全ファイルが表示される。各マイコンのファイルに飛ぶ際は、``"(マイコン名)_main"``をダブルクリック。
-    ![topREADME_asset_kankyou3](assets/topREADME_asset_kankyou3.png)
+3. このように設定することでスケッチブック内に全ファイルが表示される。
+    各マイコンのファイルに飛ぶ際は、``"(マイコン名)_main"``をダブルクリック。
+    ![top_README_kankyou3](assets/top_README_kankyou3.png)
 
-4. (余談)　全てのinoファイルのライブラリは``..(yourDocument)/CyberFlick2025/CyberFlick/libraries``に保存される。コミットの際はこのディレクトリごとコミットすること。
+- (余談)　全てのinoファイルのライブラリは``..(yourDocument)/CyberFlick2025/CyberFlick/libraries``に保存される。コミットの際はこのディレクトリごとコミットすること。
 
-5. (余談2) VS Codeでの編集も容易になる。というよりCopilotやgitとの連携のしやすさからVS Codeで編集し、IDEで焼きこみ、というフローにすることを推奨する
+- (余談2) VS Codeでの編集も容易になる。というよりCopilotやgitとの連携のしやすさからVS Codeで編集し、IDEで焼きこみ、というフローにすることを推奨する。
+    ![top_README_kankyou5](assets/top_README_kankyou5.png)
+
+
+> Tips
+Arduino IDEを使わずに[VS Codeだけで開発する方法](https://qiita.com/kotek/items/265f6eadfddfd3364e2f)もある
+
+## マイコンの接続
+
+接続図は以下。
+
+![top_README_setuzokuzu1](assets/top_README_setsuzokuzu1.png)
