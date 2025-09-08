@@ -4,6 +4,10 @@
 
 ***
 
+## 環境構築
+
+ボードマネージャーからArduino AVR Boardを入れる必要がある。
+
 ## 実機書き込み方法
 Arduino Leonaldへの書き込みは、**Arduino IDE** を用いて行う。
 
