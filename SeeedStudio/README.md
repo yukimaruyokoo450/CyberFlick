@@ -19,3 +19,9 @@
 ## 書き込み時の注意
 
 圧力センサ(FSR)がある側がA。
+
+## センサの軸方向
+
+XIAO nRF52840センサには、xyz軸に加速度とジャイロがある。センサと各軸方向は次の通り。
+
+![SeeedStudio_README_info1](../assets/SeeedStudio_README_info1.png)
