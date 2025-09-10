@@ -102,7 +102,7 @@ void loop() {
       Serial.print(gy); Serial.print(", ");
       Serial.println(gz);
 
-      delay(10); // 100Hz
+      delay(100); // 10Hz
     }
 
     Serial.println("Disconnected");

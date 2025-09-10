@@ -79,7 +79,7 @@ void loop() {
       Serial.print(" | Acc: "); Serial.print(ax); Serial.print(", "); Serial.print(ay); Serial.print(", "); Serial.print(az);
       Serial.print(" | Gyro: "); Serial.print(gx); Serial.print(", "); Serial.print(gy); Serial.print(", "); Serial.println(gz);
 
-      delay(10); // 100Hz
+      delay(100); // 10Hz
     }
 
     Serial.println("Disconnected");
