@@ -22,13 +22,15 @@ SensorData sensorA, sensorB;
 
 const int ledPin = 2; // GPIO2
 const int PowerPin = 4; // GPIO4
-const int ClickPin = 7; // GPIO7
+
+// LED関連の変数
 unsigned long ledPrevMillis = 0;
 const unsigned long ledInterval = 200;
 bool ledBlinking = false;
 bool ledState = LOW;
+
+// 電源関連の変数
 bool Power_on = false;
-bool Click_toggle = false;
 unsigned long lastClickMillis = 0;
 unsigned long fsrA_255_start = 0;
 bool fsrA_255_flag = false;
@@ -37,9 +39,13 @@ void setup() {
   Serial.begin(9600);         // PCとの通信
   espSerial.begin(9600);      // ESP32との通信
   Serial.print("ready");
+  
+  // ピンの初期化
   pinMode(ledPin, OUTPUT);
   pinMode(PowerPin, OUTPUT);
-  pinMode(ClickPin, OUTPUT);
+  
+  // マウス機能の初期化
+  Mouse.begin();
 }
 
 void loop() {
@@ -72,9 +78,6 @@ void loop() {
     // デバッグ表示
     Serial.print("Power_on: ");
     Serial.print(Power_on);
-    Serial.print(", ");
-    Serial.print("Click_toggle: ");
-    Serial.print(Click_toggle);
     Serial.print(", sensorB.az - sensorA.az: ");
     Serial.print(sensorB.az - sensorA.az);
     Serial.print(", ");
@@ -99,15 +102,6 @@ void loop() {
       digitalWrite(PowerPin, LOW); // 電源OFF
     }
 
-    if (Click_toggle)
-    {
-      digitalWrite(ClickPin, HIGH); // クリックON
-    }
-    else
-    {
-      digitalWrite(ClickPin, LOW); // クリックOFF
-    }
-
     // 0.5秒間fsrAが130以上だったら電源制御（1回だけ反転）
     static bool powerToggled = false;
     if (fsrA >= 130) {
@@ -128,13 +122,13 @@ void loop() {
     if (Power_on && (abs(sensorA.ax) >= threshold_y || abs(sensorA.ay) >= threshold_x)) {
       int moveX = (sensorA.ay - threshold_x) / 10; // 感度調整
       int moveY = -(sensorA.ax - threshold_y) / 10; // 感度調整
-      Mouse.move(moveX, moveY);
+    //   Mouse.move(moveX, moveY);
     }
 
     // クリック判定（0.2秒間は再判定しない）
     if ((sensorB.az - sensorA.az > click_judge) && (millis() - lastClickMillis >= 200)) {
-      Mouse.click();
-      Click_toggle = !Click_toggle;
+    //   Mouse.click();
+      Serial.println("Click!!");
       lastClickMillis = millis();
     }
   }

@@ -13,8 +13,10 @@ static BLEUUID charUUID("19B10003-E8F2-537E-4F6C-D104768A1214");
 // XIAOのMACアドレス（自分の機器のものに置き換えてください）
 // BLEAddress addressA("0d:27:fb:2d:f1:46");
 // BLEAddress addressB("dd:1e:83:b0:44:8e");
-BLEAddress addressA("db:bf:e0:c4:92:c2");
-BLEAddress addressB("ce:55:b9:ef:ed:01");
+// BLEAddress addressA("db:bf:e0:c4:92:c2");
+// BLEAddress addressB("ce:55:b9:ef:ed:01");
+BLEAddress addressA("5a:9d:f2:a4:b4:1a");
+BLEAddress addressB("6b:d7:98:e2:50:9e");
 
 // BLEクライアント・キャラクタリスティック
 BLEClient* clientA = nullptr;
